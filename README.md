@@ -65,7 +65,7 @@ To get started with this Laravel Basic Setup, follow these steps:
     ```
     cp .env.example .env
     php artisan key:generate
-    php artisan migrate
+    php artisan migrate --seed
 
     ```
 
