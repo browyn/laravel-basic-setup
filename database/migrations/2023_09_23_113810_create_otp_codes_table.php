@@ -15,6 +15,8 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->foreignUuid('user_id');
             $table->string('otp');
+            $table->string('for');
+            $table->dateTime('expires_at');
 
             $table->timestamps();
         });
