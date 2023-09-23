@@ -19,7 +19,8 @@ class SignUpController extends Controller
     {
         $data = $this->validateData($request);
 
-        $user = User::create($data)->assignRole(UserRoleEnum::CREATOR->value);
+        $user = User::create($data);
+        $user->assignRole(UserRoleEnum::CREATOR->value);
 
         Auth::login($user);
         $request->session()->regenerate();
